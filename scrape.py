@@ -19,10 +19,9 @@ def run(title_id ='tt0096697', num_seasons = 1):
 
         titles = [title for title in title_rows]
         descriptions = [description.xpath('text()')[0].strip() for description in description_rows] # grab first element of list from xpath to dig into div
-        airdates = [airdate.strip() for airdate in airdate_rows] # format: (n,nnn) -> nnnn
+        airdates = [airdate.strip() for airdate in airdate_rows]  # convert airdates to ISO-8601
         ratings = [rating for rating in rating_rows]
-        num_ratings = [count.replace(',','').replace('(','').replace(')', '') for count in ratingcount_rows]
-        # convert airdates to ISO-8601
+        num_ratings = [count.replace(',','').replace('(','').replace(')', '') for count in ratingcount_rows] # format: (n,nnn) -> nnnn
 
         dataframe = dataframe.append(pd.DataFrame({'season':np.full((len(titles)), i, dtype=int),
                                                 'title': titles,
