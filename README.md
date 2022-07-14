@@ -1,3 +1,8 @@
 # imdb_scraper
 
-edit scrape.py entrypoint to set imdb seried id and number of seasons to scrape.
+`python3 scrape.py`
+
+edit scrape.py entrypoint to set imdb series id and number of seasons to scrape.
+Use default (1 season) for debugging.
+
+TODO: xpath not great.
