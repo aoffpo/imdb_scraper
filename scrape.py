@@ -1,7 +1,7 @@
 from lxml import html
 import numpy as np
 import pandas as pd  
-import requests 
+import requests  
 
 def run(title_id ='tt0096697', num_seasons = 1):
     dataframe = pd.DataFrame()
