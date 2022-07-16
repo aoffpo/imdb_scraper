@@ -1,6 +1,6 @@
 # imdb_scraper
 
-Python 3.8
+Python 3.7.9
 Usage: comment out get_cast or get_episodes
 
 `python3 scrape.py > [cast.csv | episodes.csv]`
