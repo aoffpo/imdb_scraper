@@ -79,10 +79,9 @@ def get_arguments():
     argument_list = sys.argv[1:]
     options = 'hce'
     long_options = ['Help', 'Cast', 'Episodes']
-    arguments, values = getopt.getopt(argument_list, options, long_options)  # nopep8
-
+    arguments, values = getopt.getopt(argument_list, options, long_options)  # pylint: disable=unused-variable
     try:
-        for current_argument, current_value in arguments:   # nopep8
+        for current_argument, current_value in arguments:  # pylint: disable=unused-variable
             if current_argument in ('-h', '--Help'):
                 print('Scrape Episodes (-e), Cast (-c) or both (-ec) or show this help (-h)')
             elif current_argument in ('-c', '--Cast'):
